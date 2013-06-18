@@ -1,7 +1,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
-	<groupId>com.restfb</groupId>
+	<groupId>com.sproutsocial</groupId>
 	<artifactId>restfb</artifactId>
 	<packaging>jar</packaging>
 	<name>RestFB</name>
@@ -45,5 +45,38 @@
 		</developer>
 	</developers>
 
-	<dependencies></dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.1</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+
+		<sourceDirectory>${project.basedir}/source/library</sourceDirectory>
+		<testSourceDirectory>${project.basedir}/source/test</testSourceDirectory>
+		<testResources>
+			<testResource>
+				<directory>${project.basedir}/source/test</directory>
+				<excludes>
+					<exclude>**/*.java</exclude>
+				</excludes>
+			</testResource>
+		</testResources>
+	</build>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
 </project>
