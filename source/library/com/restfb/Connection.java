@@ -22,9 +22,6 @@
 
 package com.restfb;
 
-import static com.restfb.util.StringUtils.isBlank;
-import static java.util.Collections.unmodifiableList;
-
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -34,7 +31,11 @@ import com.restfb.exception.FacebookJsonMappingException;
 import com.restfb.json.JsonArray;
 import com.restfb.json.JsonException;
 import com.restfb.json.JsonObject;
+import com.restfb.types.Summary;
 import com.restfb.util.ReflectionUtils;
+
+import static com.restfb.util.StringUtils.isBlank;
+import static java.util.Collections.unmodifiableList;
 
 /**
  * Represents a <a href="http://developers.facebook.com/docs/api">Graph API Connection type</a>.
@@ -47,6 +48,7 @@ public class Connection<T> implements Iterable<List<T>> {
   private List<T> data;
   private String previousPageUrl;
   private String nextPageUrl;
+  private Summary summary;
 
   /**
    * @see java.lang.Iterable#iterator()
@@ -165,6 +167,12 @@ public class Connection<T> implements Iterable<List<T>> {
       nextPageUrl = null;
     }
 
+    // Pull out summary info, if present
+    if (jsonObject.has("summary")) {
+      JsonObject jsonSummary = jsonObject.getJsonObject("summary");
+      summary = facebookClient.getJsonMapper().toJavaObject(jsonSummary.toString(), Summary.class);
+    }
+
     this.data = unmodifiableList(data);
     this.facebookClient = facebookClient;
     this.connectionType = connectionType;
@@ -250,4 +258,14 @@ public class Connection<T> implements Iterable<List<T>> {
   public boolean hasNext() {
     return !isBlank(getNextPageUrl());
   }
+
+  /**
+   * Summary for this connection.
+   * 
+   * @return Summary for this connection.
+   */
+  public Summary getSummary() {
+    return summary;
+  }
+
 }

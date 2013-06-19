@@ -22,11 +22,6 @@
 
 package com.restfb.types;
 
-import static com.restfb.json.JsonObject.getNames;
-import static com.restfb.util.DateUtils.toDateFromLongFormat;
-import static java.util.Collections.unmodifiableList;
-import static java.util.Collections.unmodifiableMap;
-
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
@@ -40,6 +35,11 @@ import com.restfb.JsonMapper.JsonMappingCompleted;
 import com.restfb.json.JsonObject;
 import com.restfb.types.Checkin.Place.Location;
 import com.restfb.util.ReflectionUtils;
+
+import static com.restfb.json.JsonObject.getNames;
+import static com.restfb.util.DateUtils.toDateFromLongFormat;
+import static java.util.Collections.unmodifiableList;
+import static java.util.Collections.unmodifiableMap;
 
 /**
  * Represents the <a href="http://developers.facebook.com/docs/reference/api/post">Post Graph API type</a>.
@@ -355,6 +355,8 @@ public class Post extends NamedFacebookType {
   public static class Comments implements Serializable {
     @Facebook
     private Long count;
+    @Facebook
+    private Summary summary;
 
     @Facebook
     private List<Comment> data = new ArrayList<Comment>();
@@ -390,8 +392,18 @@ public class Post extends NamedFacebookType {
      * 
      * @return The number of comments.
      */
+    @Deprecated
     public Long getCount() {
       return count;
+    }
+
+    /**
+     * The summary
+     * 
+     * @return The summary.
+     */
+    public Summary getSummary() {
+      return summary;
     }
 
     /**
@@ -557,8 +569,9 @@ public class Post extends NamedFacebookType {
   }
 
   /**
-   * Represents the Shares included the <a href="http://developers.facebook.com/docs/reference/api/post">Post</a> response.
-   * Presently only supports count.
+   * Represents the Shares included the <a href="http://developers.facebook.com/docs/reference/api/post">Post</a>
+   * response. Presently only supports count.
+   * 
    * @since 1.6.11
    */
   public static class Shares implements Serializable {
@@ -566,7 +579,7 @@ public class Post extends NamedFacebookType {
     private Long count;
 
     private static final long serialVersionUID = 1L;
-    
+
     /**
      * @see java.lang.Object#hashCode()
      */
@@ -600,7 +613,7 @@ public class Post extends NamedFacebookType {
       return count;
     }
   }
-  
+
   /**
    * An object containing the ID and name of the user who posted the message.
    * 
@@ -731,7 +744,7 @@ public class Post extends NamedFacebookType {
   public Likes getLikes() {
     return likes;
   }
-  
+
   /**
    * The number of shares of this post.
    * 

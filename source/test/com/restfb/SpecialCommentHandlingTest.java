@@ -22,11 +22,11 @@
 
 package com.restfb;
 
-import static junit.framework.Assert.assertTrue;
-
 import org.junit.Test;
 
 import com.restfb.types.Post;
+
+import static junit.framework.Assert.assertTrue;
 
 /**
  * Facebook can return Post comment fields as an empty array instead of an empty object. These tests ensure our JSON
@@ -62,5 +62,7 @@ public class SpecialCommentHandlingTest extends AbstractJsonMapperTests {
   public void normalTest() {
     Post post = createJsonMapper().toJavaObject(jsonFromClasspath("post-with-normal-comments"), Post.class);
     assertTrue(post.getComments().getData().size() == 1);
+    assertTrue(post.getComments().getSummary() != null);
+    assertTrue(post.getComments().getSummary().getTotalCount() == 3);
   }
 }
