@@ -22,6 +22,9 @@
 
 package com.restfb;
 
+import static com.restfb.util.StringUtils.isBlank;
+import static java.util.Collections.unmodifiableList;
+
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -33,9 +36,6 @@ import com.restfb.json.JsonException;
 import com.restfb.json.JsonObject;
 import com.restfb.types.Summary;
 import com.restfb.util.ReflectionUtils;
-
-import static com.restfb.util.StringUtils.isBlank;
-import static java.util.Collections.unmodifiableList;
 
 /**
  * Represents a <a href="http://developers.facebook.com/docs/api">Graph API Connection type</a>.
@@ -176,6 +176,16 @@ public class Connection<T> implements Iterable<List<T>> {
     this.data = unmodifiableList(data);
     this.facebookClient = facebookClient;
     this.connectionType = connectionType;
+  }
+
+  public Connection(FacebookClient facebookClient, Class<T> connectionType, List<T> data, String previousPageUrl,
+      String nextPageUrl, Summary summary) {
+    this.facebookClient = facebookClient;
+    this.connectionType = connectionType;
+    this.data = data;
+    this.previousPageUrl = previousPageUrl;
+    this.nextPageUrl = nextPageUrl;
+    this.summary = summary;
   }
 
   /**
