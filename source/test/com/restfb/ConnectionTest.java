@@ -5,8 +5,6 @@ import static junit.framework.Assert.assertTrue;
 
 import java.util.Iterator;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 import org.junit.Test;
 
@@ -54,16 +52,17 @@ public class ConnectionTest extends AbstractJsonMapperTests {
         System.out.format("*** Comment: %s, %s%n", comment.getId(), comment.getMessage());
       }
     }
-    
+
     for (Comment comment : comments.getData()) {
       System.out.format("Comment: %s, %s%n", comment.getId(), comment.getMessage());
     }
 
-//    Connection<Comment> connection =
-//        facebookClient.fetchConnection("8532248414_10151662413923415/comments", Comment.class,
-//          Parameter.with("limit", 25), Parameter.with("filter", "stream"), Parameter.with("summary", true));
-//
-//    System.out.format("Summary: %s, %d%n", connection.getSummary().getOrder(), connection.getSummary().getTotalCount());
+    // Connection<Comment> connection =
+    // facebookClient.fetchConnection("8532248414_10151662413923415/comments", Comment.class,
+    // Parameter.with("limit", 25), Parameter.with("filter", "stream"), Parameter.with("summary", true));
+    //
+    // System.out.format("Summary: %s, %d%n", connection.getSummary().getOrder(),
+    // connection.getSummary().getTotalCount());
 
     // for (Comment comment : connection.getData()) {
     // System.out.format("Comment: %s, %s%n", comment.getId(),
