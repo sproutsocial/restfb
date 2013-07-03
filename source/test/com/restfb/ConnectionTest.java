@@ -37,8 +37,13 @@ public class ConnectionTest extends AbstractJsonMapperTests {
     System.out.format("Page: %s, %s%n", page.getId(), page.getDescription());
 
     MyPost post =
-        facebookClient.fetchObject("8532248414_10151662413923415", MyPost.class,
-          Parameter.with("fields", "comments.summary(true).filter(stream)"));
+        facebookClient
+          .fetchObject(
+            "8532248414_10151662413923415",
+            MyPost.class,
+            Parameter
+              .with("fields",
+                "comments.summary(true).filter(stream).fields(id,from,message,can_remove,created_time,like_count,user_likes,parent)"));
     System.out.format("Post (%s): %s, %s%n", post.getClass().getName(), post.getId(), post.getType());
 
     Comments comments = post.getComments();
@@ -49,7 +54,7 @@ public class ConnectionTest extends AbstractJsonMapperTests {
     Connection<Comment> connection = comments.asConnection(facebookClient, Comment.class);
     for (Iterator<List<Comment>> it = connection.iterator(); it.hasNext();) {
       for (Comment comment : it.next()) {
-        System.out.format("*** Comment: %s, %s%n", comment.getId(), comment.getMessage());
+        System.out.format("*** Comment: %s, %s ->%s%n", comment.getId(), comment.getMessage(), comment.getParent());
       }
     }
 
