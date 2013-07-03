@@ -57,7 +57,7 @@ public class Comment extends FacebookType {
   private Boolean userLikes;
 
   @Facebook
-  private String parent;
+  private Comment parent;
 
   private static final long serialVersionUID = 2L;
 
@@ -131,9 +131,9 @@ public class Comment extends FacebookType {
   }
 
   /**
-   * @return The comment ID this replies to
+   * @return The comment this replies to
    */
-  public String getParent() {
+  public Comment getParent() {
     return parent;
   }
 
