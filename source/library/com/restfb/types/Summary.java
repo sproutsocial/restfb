@@ -7,7 +7,7 @@ public class Summary {
   @Facebook
   private String order;
   @Facebook("total_count")
-  private Long totalCount;
+  private Long totalCount = 0L;
 
   public String getOrder() {
     return order;

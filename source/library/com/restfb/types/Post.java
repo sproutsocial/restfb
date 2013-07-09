@@ -112,7 +112,7 @@ public class Post extends NamedFacebookType {
   private String statusType;
 
   @Facebook
-  private Comments comments;
+  private Comments comments = new Comments();
 
   @Facebook
   private com.restfb.types.Place place;
@@ -358,9 +358,9 @@ public class Post extends NamedFacebookType {
     @Facebook
     private Long count;
     @Facebook
-    private Paging paging;
+    private Paging paging = new Paging();
     @Facebook
-    private Summary summary;
+    private Summary summary = new Summary();
 
     @Facebook
     private List<Comment> data = new ArrayList<Comment>();
@@ -398,7 +398,8 @@ public class Post extends NamedFacebookType {
      */
     @Deprecated
     public Long getCount() {
-      return count;
+      //return count;
+      return getSummary().getTotalCount();
     }
 
     /**
