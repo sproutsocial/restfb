@@ -22,6 +22,7 @@
 
 package com.restfb;
 
+import org.junit.Ignore;
 import org.junit.Test;
 
 import com.restfb.types.Post;
@@ -49,7 +50,7 @@ public class SpecialCommentHandlingTest extends AbstractJsonMapperTests {
   /**
    * Can we handle comments that are objects with only a count and no data?
    */
-  @Test
+  @Test @Ignore @Deprecated
   public void onlyCountTest() {
     Post post = createJsonMapper().toJavaObject(jsonFromClasspath("post-with-comment-count-only"), Post.class);
     assertTrue(post.getComments().getCount() == 3);

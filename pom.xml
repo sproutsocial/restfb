@@ -5,7 +5,7 @@
 	<artifactId>restfb-by-sproutsocial</artifactId>
 	<packaging>jar</packaging>
 	<name>RestFB</name>
-	<version>1.6.12.1</version>
+	<version>1.6.12.2-SNAPSHOST</version>
 	<description>RestFB is a simple and flexible Facebook Graph API and Old REST API client written in Java.</description>
 	<url>http://restfb.com</url>
 
@@ -66,6 +66,30 @@
 					<source>1.6</source>
 					<target>1.6</target>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-source-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-sources</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>attach-javadocs</id>
+						<goals>
+							<goal>jar</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 
