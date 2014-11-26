@@ -59,6 +59,9 @@ public class Comment extends FacebookType {
   @Facebook
   private Comment parent;
 
+  @Facebook("can_comment")
+  private Boolean canComment;
+
   private static final long serialVersionUID = 2L;
 
   /**
@@ -137,4 +140,7 @@ public class Comment extends FacebookType {
     return parent;
   }
 
+  public Boolean getCanComment() {
+    return canComment;
+  }
 }

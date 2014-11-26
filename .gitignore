@@ -2,3 +2,4 @@
 /pom.xml.asc
 /.eclipse-build
 /target
+atlassian-ide-plugin.xml
