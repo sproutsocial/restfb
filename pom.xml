@@ -48,11 +48,11 @@
 	<distributionManagement>
 		<repository>
 			<id>internal</id>
-			<url>http://sprout-archiva01.int.sproutsocial.com::8080/archiva/repository/internal/</url>
+			<url>http://sprout-archiva01.int.sproutsocial.com:8080/archiva/repository/internal/</url>
 		</repository>
 		<snapshotRepository>
 			<id>snapshots</id>
-			<url>http://sprout-archiva01.int.sproutsocial.com::8080/archiva/repository/snapshots/</url>
+			<url>http://sprout-archiva01.int.sproutsocial.com:8080/archiva/repository/snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
