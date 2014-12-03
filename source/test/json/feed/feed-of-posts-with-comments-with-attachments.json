@@ -1,0 +1,177 @@
+{
+    "data": [
+        {
+            "actions": [
+                {
+                    "link": "https://www.facebook.com/1000/posts/1505528239720815",
+                    "name": "Comment"
+                },
+                {
+                    "link": "https://www.facebook.com/1000/posts/1505528239720815",
+                    "name": "Like"
+                }
+            ],
+            "comments": {
+                "data": [
+                    {
+                        "attachment": {
+                            "description": "Buy and sell electronics, cars, fashion apparel, collectibles, sporting goods, digital cameras, baby items, coupons, and everything else on eBay, the world's online marketplace",
+                            "media": {
+                                "image": {
+                                    "height": 402,
+                                    "src": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQClRO9t1aWcNreU&w=720&h=720&url=http%3A%2F%2Frtm.ebaystatic.com%2F0%2FRTMS%2FImage%2FGR68160-10_Dec02_HALO_656x402_ipad.jpg&cfs=1",
+                                    "width": 402
+                                }
+                            },
+                            "target": {
+                                "id": "226547524203272_10104391096973280",
+                                "url": "http://l.facebook.com/l.php?u=http%3A%2F%2Febay.com%2F&h=AAQEzHR0W"
+                            },
+                            "title": "Electronics, Cars, Fashion, Collectibles, Coupons and More | eBay",
+                            "type": "share",
+                            "url": "http://www.facebook.com/l.php?u=http%3A%2F%2Febay.com%2F&h=FAQG0fBgV&s=1&enc=AZNTpnaa871IyYX4gZp7EWxVaDA8ngHq1PFWqCCWLGB44bW_HyAeoDElPmWhy6epQO1XHWj8Z3b59bwQ9tRJvH4TN_qqgYy-E01aApMccAwbHg"
+                        },
+                        "can_comment": true,
+                        "can_remove": true,
+                        "comment_count": 0,
+                        "created_time": "2014-12-02T22:14:18+0000",
+                        "from": {
+                            "id": "2000",
+                            "name": "Some User"
+                        },
+                        "id": "1505528239720815_1505528266387479",
+                        "like_count": 0,
+                        "message": "ebay.com",
+                        "user_likes": false
+                    },
+                    {
+                        "attachment": {
+                            "description": "Je\u015bli chcesz zacz\u0105\u0107, to od tego: http://bit.ly/wowBattlechest Warlords of Draenor: http://bit.ly/rockDraenor Obecna seria: http://bit.ly/OpowiesciWoW Stare c...",
+                            "media": {
+                                "image": {
+                                    "height": 720,
+                                    "src": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAGo8-5i1mHQ3t_&w=720&h=720&url=http%3A%2F%2Fi.ytimg.com%2Fvi%2FjmDLFk8qOBk%2Fmaxresdefault.jpg&cfs=1",
+                                    "width": 720
+                                }
+                            },
+                            "target": {
+                                "id": "226547524203272_10104391099513190",
+                                "url": "https://www.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjmDLFk8qOBk&h=IAQEQpoUu"
+                            },
+                            "title": "World of Warcraft - Druid 90 lvl",
+                            "type": "video_share_youtube",
+                            "url": "https://www.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjmDLFk8qOBk&h=5AQGvZ_o6&s=1&enc=AZOgKv7wgs2kqC6GARRdSZsBud_b8THSMIXMkV_-bIQKaTZSvFOQr0AZFkhRgVK5RuicRrrylDTVA-Nogq4TxPqy3gb7r135PRm1eYCLON0eGw"
+                        },
+                        "can_comment": true,
+                        "can_remove": true,
+                        "comment_count": 1,
+                        "created_time": "2014-12-02T22:15:35+0000",
+                        "from": {
+                            "id": "2000",
+                            "name": "Some User"
+                        },
+                        "id": "1505528239720815_1505528526387453",
+                        "like_count": 0,
+                        "message": "https://www.youtube.com/watch?v=jmDLFk8qOBk",
+                        "user_likes": false
+                    },
+                    {
+                        "attachment": {
+                            "media": {
+                                "image": {
+                                    "height": 633,
+                                    "src": "https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-xfp1/v/t1.0-9/10419546_10104391099957300_5446995118162514521_n.jpg?oh=4ddf005b2d983247d9cedeabcfc0ceed&oe=55048A4D&__gda__=1426952232_c03cc429c8dad962f50025ae061d275e",
+                                    "width": 720
+                                }
+                            },
+                            "target": {
+                                "id": "10104391099957300",
+                                "url": "https://www.facebook.com/photo.php?fbid=10104391099957300&set=p.10104391099957300&type=1"
+                            },
+                            "type": "photo",
+                            "url": "https://www.facebook.com/photo.php?fbid=10104391099957300&set=p.10104391099957300&type=1"
+                        },
+                        "can_comment": false,
+                        "can_remove": true,
+                        "comment_count": 0,
+                        "created_time": "2014-12-02T22:15:52+0000",
+                        "from": {
+                            "id": "2000",
+                            "name": "Some User"
+                        },
+                        "id": "1505528239720815_1505528593054113",
+                        "like_count": 0,
+                        "message": "",
+                        "parent": {
+                            "attachment": {
+                                "description": "Je\u015bli chcesz zacz\u0105\u0107, to od tego: http://bit.ly/wowBattlechest Warlords of Draenor: http://bit.ly/rockDraenor Obecna seria: http://bit.ly/OpowiesciWoW Stare c...",
+                                "media": {
+                                    "image": {
+                                        "height": 720,
+                                        "src": "https://fbexternal-a.akamaihd.net/safe_image.php?d=AQAGo8-5i1mHQ3t_&w=720&h=720&url=http%3A%2F%2Fi.ytimg.com%2Fvi%2FjmDLFk8qOBk%2Fmaxresdefault.jpg&cfs=1",
+                                        "width": 720
+                                    }
+                                },
+                                "target": {
+                                    "id": "226547524203272_10104391099513190",
+                                    "url": "https://www.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjmDLFk8qOBk&h=IAQEQpoUu"
+                                },
+                                "title": "World of Warcraft - Druid 90 lvl",
+                                "type": "video_share_youtube",
+                                "url": "https://www.facebook.com/l.php?u=https%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DjmDLFk8qOBk&h=5AQGvZ_o6&s=1&enc=AZOgKv7wgs2kqC6GARRdSZsBud_b8THSMIXMkV_-bIQKaTZSvFOQr0AZFkhRgVK5RuicRrrylDTVA-Nogq4TxPqy3gb7r135PRm1eYCLON0eGw"
+                            },
+                            "can_comment": true,
+                            "can_remove": true,
+                            "comment_count": 1,
+                            "created_time": "2014-12-02T22:15:35+0000",
+                            "from": {
+                                "id": "2000",
+                                "name": "Some User"
+                            },
+                            "id": "1505528239720815_1505528526387453",
+                            "like_count": 0,
+                            "message": "https://www.youtube.com/watch?v=jmDLFk8qOBk",
+                            "user_likes": false
+                        },
+                        "user_likes": false
+                    }
+                ],
+                "paging": {
+                    "cursors": {
+                        "after": "WTI5dGJXVnVkRjlqZFhKemIzSTZNVFV3TlRVeU9EVTVNekExTkRFeE16b3hOREUzTlRVNE5UVXlPaTB4",
+                        "before": "WTI5dGJXVnVkRjlqZFhKemIzSTZNVFV3TlRVeU9ESTJOak00TnpRM09Ub3hOREUzTlRVNE5EVTRPaTB4"
+                    }
+                },
+                "summary": {
+                    "order": "chronological",
+                    "total_count": 3
+                }
+            },
+            "created_time": "2014-12-02T22:14:12+0000",
+            "from": {
+                "id": "2000",
+                "name": "Some User"
+            },
+            "id": "1000_1505528239720815",
+            "message": "post with some photos",
+            "privacy": {
+                "value": ""
+            },
+            "to": {
+                "data": [
+                    {
+                        "category": "Community",
+                        "id": "1000",
+                        "name": "Some Page"
+                    }
+                ]
+            },
+            "type": "status",
+            "updated_time": "2014-12-02T22:15:52+0000"
+        }
+    ],
+    "paging": {
+        "next": "https://graph.facebook.com/v1.0/1000/feed?fields=id,from,to,message,message_tags,picture,link,name,caption,description,source,properties,icon,actions,privacy,type,place,story,story_tags,with_tags,object_id,application,created_time,updated_time,shares,likes.summary%28true%29,status_type,comments.summary%28true%29.filter%28stream%29%7Bid,from,message,attachment,created_time,like_count,user_likes,can_comment,comment_count,can_remove,parent%7Bid,from,message,attachment,created_time,like_count,user_likes,can_comment,comment_count,can_remove%7D%7D&limit=1&format=json&access_token=TOKEN&until=1417558451",
+        "previous": "https://graph.facebook.com/v1.0/1000/feed?fields=id,from,to,message,message_tags,picture,link,name,caption,description,source,properties,icon,actions,privacy,type,place,story,story_tags,with_tags,object_id,application,created_time,updated_time,shares,likes.summary%28true%29,status_type,comments.summary%28true%29.filter%28stream%29%7Bid,from,message,attachment,created_time,like_count,user_likes,can_comment,comment_count,can_remove,parent%7Bid,from,message,attachment,created_time,like_count,user_likes,can_comment,comment_count,can_remove%7D%7D&limit=1&format=json&since=1417558452&access_token=TOKEN&__previous=1"
+    }
+}

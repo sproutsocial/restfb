@@ -5,9 +5,13 @@
 	<artifactId>restfb-by-sproutsocial</artifactId>
 	<packaging>jar</packaging>
 	<name>RestFB</name>
-	<version>1.6.12.3</version>
+	<version>1.6.12.4</version>
 	<description>RestFB is a simple and flexible Facebook Graph API and Old REST API client written in Java.</description>
 	<url>http://restfb.com</url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
 
 	<licenses>
 		<license>

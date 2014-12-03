@@ -24,7 +24,9 @@ package com.restfb.types;
 
 import static com.restfb.util.DateUtils.toDateFromLongFormat;
 
+import java.io.Serializable;
 import java.util.Date;
+import java.util.List;
 
 import com.restfb.Facebook;
 
@@ -61,6 +63,9 @@ public class Comment extends FacebookType {
 
   @Facebook("can_comment")
   private Boolean canComment;
+
+  @Facebook("attachment")
+  private StoryAttachment attachment;
 
   private static final long serialVersionUID = 2L;
 
@@ -142,5 +147,116 @@ public class Comment extends FacebookType {
 
   public Boolean getCanComment() {
     return canComment;
+  }
+
+  public StoryAttachment getAttachment() {
+    return attachment;
+  }
+
+  public static class StoryAttachment implements Serializable {
+    private static final long serialVersionUID = 1L;
+
+    @Facebook("description")
+    private String description;
+
+    @Facebook("description_tags")
+    private List<String> description_tags;
+
+    @Facebook("media")
+    private StoryAttachmentMedia media;
+
+    @Facebook("target")
+    private StoryAttachmentTarget target;
+
+    @Facebook("title")
+    private String title;
+
+    @Facebook("type")
+    private String type;
+
+    @Facebook("url")
+    private String url;
+
+    public String getDescription() {
+      return description;
+    }
+
+    public List<String> getDescriptionTags() {
+      return description_tags;
+    }
+
+    public StoryAttachmentMedia getMedia() {
+      return media;
+    }
+
+    public StoryAttachmentTarget getTarget() {
+      return target;
+    }
+
+    public String getTitle() {
+      return title;
+    }
+
+    public String getType() {
+      return type;
+    }
+
+    public String getUrl() {
+      return url;
+    }
+
+    public static class StoryAttachmentMedia implements Serializable{
+      private static final long serialVersionUID = 1L;
+
+      @Facebook("image")
+      private ImageSource image;
+
+      public ImageSource getImage() {
+        return image;
+      }
+
+      public static class ImageSource implements Serializable {
+        private static final long serialVersionUID = 1L;
+
+        @Facebook("height")
+        private int height;
+
+        @Facebook("src")
+        private String src;
+
+        @Facebook("width")
+        private int width;
+
+        public int getHeight() {
+          return height;
+        }
+
+        public String getSrc() {
+          return src;
+        }
+
+        public int getWidth() {
+          return width;
+        }
+      }
+    }
+
+    public static class StoryAttachmentTarget implements Serializable {
+      private static final long serialVersionUID = 1L;
+
+      @Facebook("id")
+      private String id;
+
+      @Facebook("url")
+      private String url;
+
+      public String getId() {
+        return id;
+      }
+
+      public String getUrl() {
+        return url;
+      }
+    }
   }
 }
