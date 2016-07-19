@@ -76,4 +76,10 @@ public class ClasspathWebRequestor implements WebRequestor {
   public Response executePost(String url, String parameters, BinaryAttachment... binaryAttachments) throws IOException {
     return response;
   }
+
+  @Override
+  public DebugHeaderInfo getDebugHeaderInfo() {
+    return null;
+  }
+
 }

@@ -22,6 +22,8 @@
 
 package com.restfb;
 
+import com.restfb.util.StringUtils;
+
 import static com.restfb.util.StringUtils.ENCODING_CHARSET;
 import static com.restfb.util.StringUtils.fromInputStream;
 import static com.restfb.util.UrlUtils.urlDecode;
@@ -37,6 +39,8 @@ import java.io.InputStream;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.List;
+import java.util.Map;
 import java.util.logging.Logger;
 
 /**
@@ -75,6 +79,10 @@ public class DefaultWebRequestor implements WebRequestor {
    */
   private static final Logger logger = Logger.getLogger("com.restfb.HTTP");
 
+  private Map<String, List<String>> currentHeaders;
+
+  private DebugHeaderInfo debugHeaderInfo;
+
   /**
    * @see com.restfb.WebRequestor#executeGet(java.lang.String)
    */
@@ -100,6 +108,8 @@ public class DefaultWebRequestor implements WebRequestor {
 
       if (logger.isLoggable(FINER))
         logger.finer("Response headers: " + httpUrlConnection.getHeaderFields());
+
+      extractHttpResponseHeaders(httpUrlConnection);
 
       try {
         inputStream =
@@ -188,6 +198,8 @@ public class DefaultWebRequestor implements WebRequestor {
 
       if (logger.isLoggable(FINER))
         logger.finer("Response headers: " + httpUrlConnection.getHeaderFields());
+
+      extractHttpResponseHeaders(httpUrlConnection);
 
       try {
         inputStream =
@@ -314,5 +326,26 @@ public class DefaultWebRequestor implements WebRequestor {
     String name = binaryAttachment.getFilename();
     int fileExtensionIndex = name.lastIndexOf(".");
     return fileExtensionIndex > 0 ? name.substring(0, fileExtensionIndex) : name;
+  }
+
+  private void extractHttpResponseHeaders(HttpURLConnection httpURLConnection) {
+    currentHeaders = httpURLConnection.getHeaderFields();
+
+    String apiVersionUsed = StringUtils.trimToNull(httpURLConnection.getHeaderField("facebook-api-version"));
+    String debug = StringUtils.trimToNull(httpURLConnection.getHeaderField("x-fb-debug"));
+    String rev = StringUtils.trimToNull(httpURLConnection.getHeaderField("x-fb-rev"));
+    String traceId = StringUtils.trimToNull(httpURLConnection.getHeaderField("x-fb-trace-id"));
+    String appUsage = StringUtils.trimToNull(httpURLConnection.getHeaderField("x-app-usage"));
+    String pageUsage = StringUtils.trimToNull(httpURLConnection.getHeaderField("x-page-usage"));
+
+    debugHeaderInfo = new DebugHeaderInfo(debug, rev, traceId, apiVersionUsed, appUsage, pageUsage);
+  }
+
+  public Map<String, List<String>> getCurrentHeaders() {
+    return currentHeaders;
+  }
+
+  public DebugHeaderInfo getDebugHeaderInfo() {
+    return debugHeaderInfo;
   }
 }

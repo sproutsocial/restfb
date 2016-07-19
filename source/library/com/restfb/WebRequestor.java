@@ -131,4 +131,11 @@ public interface WebRequestor {
    *           If an error occurs while performing the {@code POST}.
    */
   Response executePost(String url, String parameters, BinaryAttachment... binaryAttachments) throws IOException;
+
+  /**
+   * Get the Facebook response headers associated with the request.
+   *
+   * @return Instance of DebugHeaderInfo
+     */
+  DebugHeaderInfo getDebugHeaderInfo();
 }
