@@ -67,4 +67,31 @@ public class DebugHeaderInfo {
         return pageUsage;
     }
 
+    public static class PageUsageStatistics {
+        private Integer call_count;
+        private Integer total_cputime;
+        private Integer total_time;
+
+        public Integer getCallCount() {
+            return call_count;
+        }
+
+        public Integer getTotalCputime() {
+            return total_cputime;
+        }
+
+        public Integer getTotalTime() {
+            return total_time;
+        }
+
+        @Override
+        public String toString() {
+            return "PageUsageStatistics{" +
+                    "call_count=" + call_count +
+                    ", total_cputime=" + total_cputime +
+                    ", total_time=" + total_time +
+                    '}';
+        }
+    }
+
 }
