@@ -68,8 +68,14 @@ public class DebugHeaderInfo {
     }
 
     public static class PageUsageStatistics {
+
+        @Facebook
         private Integer call_count;
+
+        @Facebook
         private Integer total_cputime;
+
+        @Facebook
         private Integer total_time;
 
         public Integer getCallCount() {
